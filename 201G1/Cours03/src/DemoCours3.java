@@ -51,7 +51,7 @@ public class DemoCours3 {
 
         force = calculerForce(masse, acceleration);
 
-        System.out.println(" masse = " + masse);
+        System.out.print(" masse = " + masse + "\n");
         System.out.println(" accélération = " + acceleration);
         System.out.println(" force = " + force);
     }
