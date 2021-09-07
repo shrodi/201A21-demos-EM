@@ -10,7 +10,7 @@ public class Trace02 {
     public int afficherPourTracer1(int a) {
         int b = 3;
         System.out.println("3. a=" + a + " b=" + b);
-        a = a - 1;
+        a = a - 1 ;
         b = afficherPourTracer2(b, 3);
         System.out.println("4. a=" + a + " b=" + b);
         return b + 3;
