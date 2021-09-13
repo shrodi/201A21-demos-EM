@@ -12,12 +12,12 @@ public class LectureClavier {
 
         sc = new Scanner(System.in); //Instanciation de l'utilitaire de lecture
 
-        System.out.println("Entrez votre nom : ");
+        System.out.print("Entrez votre nom : ");
 
 //Appel d’une méthode qui récupère une chaine de caractères saisis au clavier.
         nom = sc.nextLine();
 
-        System.out.println("Votre nom est : " + nom);
+        System.out.println("Votre nom est : \n" + nom);
     }
 
 
