@@ -16,9 +16,18 @@ public class Cours09BouclesChar {
     }
 
     private void testerModulo() {
-        System.out.println("6 modulo 2 = " + 6 % 2);
-        System.out.println("7 modulo 2 = " + 7 % 2);
-        System.out.println("13 modulo 3 = " + 13 % 3 );
+        int dividende;
+        int diviseur;
+
+        dividende = 6;
+        diviseur = 2;
+        System.out.println(dividende + " modulo " + diviseur + " = " + dividende % diviseur);
+        dividende = 7;
+        diviseur = 2;
+        System.out.println(dividende + " modulo " + diviseur + " = " + dividende % diviseur);
+        dividende = 13;
+        diviseur = 3;
+        System.out.println(dividende + " modulo " + diviseur + " = " + dividende % diviseur);
     }
 
     public void appuyerSurEspaceETEnterSVP() {

@@ -1,5 +1,5 @@
-public class Cours09DemoSi {
-    public Cours09DemoSi() {
+public class Cours08DemoSi {
+    public Cours08DemoSi() {
         // testerAfficherSiUnNbEstPositifV2();
         // testerCalculerRabais () ;
         // testerEstEchec();
@@ -119,6 +119,6 @@ public class Cours09DemoSi {
     }
 
     public static void main(String[] args) {
-        new Cours09DemoSi();
+        new Cours08DemoSi();
     }
 }
