@@ -28,6 +28,9 @@ public class Cours09BouclesChar {
         dividende = 13;
         diviseur = 3;
         System.out.println(dividende + " modulo " + diviseur + " = " + dividende % diviseur);
+        dividende = 14;
+        diviseur = 3;
+        System.out.println(dividende + " modulo " + diviseur + " = " + dividende % diviseur);
     }
 
     public void appuyerSurEspaceETEnterSVP() {
