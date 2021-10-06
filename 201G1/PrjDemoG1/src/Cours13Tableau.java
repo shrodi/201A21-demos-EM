@@ -38,15 +38,19 @@ public class Cours13Tableau {
             moyenne = calculerMoyenne(tabNotes);
 
             System.out.println("La moyenne des notes est : " + moyenne);
-            for (int i = 0; i < tabNotes.length; i++) {
-                if (tabNotes[i] > moyenne) {
-                    System.out.println("Note no " + (i + 1) + " : " + tabNotes[i]);
-                }
-            }
+            afficherElementAuDessus(tabNotes, (int) moyenne);
         }
     }
 
     //	Écrire une méthode qui affiche les nombres d’un tableau d’entier au-dessus ou égale à une valeur passée en argument.
+    public void afficherElementAuDessus(int tab[], int min) {
+        for (int i = 0; i <tab.length ; i++)
+        {
+            if (tab[i] > min) {
+                System.out.println(tab [i]);
+            }
+        }
+    }
 
     public  int[] saisirTableauEntiers (int nbElementASaisir, String question, int min, int max) {
         int tabEntier[];
