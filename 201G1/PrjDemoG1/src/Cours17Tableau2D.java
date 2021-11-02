@@ -7,13 +7,15 @@ public class Cours17Tableau2D {
         int[][] t2d1 = {{1, 2, 3}, {4, 5, 6}}; //tableau de 2 lignes par 3 colonnes
         int[][] t2d2 = {{1, 2, 3}}; //tableau de 1 lignes par 3 colonnes
         int[][] t2d3 = {{1}, {2}, {3}}; //tableau de 3 lignes par 1 colonnes
+        int[][] t2d4 = {{}, {}, {}}; //tableau de 3 lignes par 1 colonnes
 
-        afficherMatricesEtMatriceTransposee(t2d1);
-        afficherMatricesEtMatriceTransposee(t2d2);
-        afficherMatricesEtMatriceTransposee(t2d3);
+        afficherMatriceEtMatriceTransposee(t2d1);
+        afficherMatriceEtMatriceTransposee(t2d2);
+        afficherMatriceEtMatriceTransposee(t2d3);
+        afficherMatriceEtMatriceTransposee(t2d4);
     }
 
-    private void afficherMatricesEtMatriceTransposee(int[][] t2d) {
+    private void afficherMatriceEtMatriceTransposee(int[][] t2d) {
         System.out.println("-------------------------------------------");
         System.out.println(getStringTabInt2D(t2d));
         System.out.println("Cette matrice transposée : ");
