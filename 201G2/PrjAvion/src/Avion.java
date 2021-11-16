@@ -1,32 +1,55 @@
 import java.util.Arrays;
 
 public class Avion {
-    private Passager[] tabPassager;
+    private Passager tabPassager[];
     private int nbPassager;
 
-    public Avion(int nbPassagerMax) {
-        tabPassager = new Passager[nbPassagerMax];
+    public Avion(int nbMaxPassager) {
         nbPassager = 0;
+        tabPassager = new Passager[nbMaxPassager];
     }
 
-    public void addPassager(Passager p) {
-        tabPassager[nbPassager++] = p;
+    public void ajouterPassager(Passager passager) {
+        if (nbPassager >= tabPassager.length) {
+            throw new ArrayIndexOutOfBoundsException("Il y a trop de passager dans l'avion");
+        }
+        //expliquer différence entre nbPassager++ et ++nbPassager
+        tabPassager[nbPassager++] = passager;
+    }
+
+    public double getMoyenneAge() {
+        double moyenne;
+        int total;
+
+        total = 0;
+        for (int i = 0; i < nbPassager; i++) {
+            total += tabPassager[i].getAge();
+        }
+
+        moyenne = total / nbPassager;
+        return moyenne;
+    }
+
+    public int getPoidsPassager() {
+        int total;
+
+        total = 0;
+        for (int i = 0; i < nbPassager; i++) {
+            total += tabPassager[i].getPoids();
+        }
+
+        return total;
     }
 
     @Override
     public String toString() {
-        return "Avion{" +
-                "\n nbPassager=" + nbPassager +
-                "\n Passager dans l'avion=" + getStrPassagers() +
-                "\n tabPassager=" + Arrays.toString(tabPassager) +
-                "\n}";
-    }
-
-    private String getStrPassagers() {
         String str = "";
-        for (int i = 0; i < nbPassager; i++) {
-            str += ", " + tabPassager[i].toString();
-        }
+        str += "Avion{";
+        str += " nombre de passager = " + nbPassager;
+        str += ", moyenne d'âge = " + (nbPassager == 0 ? "Aucun passager" : getMoyenneAge());
+        str += ", poids des passagers = " + getPoidsPassager();
+        str += ", tabPassager = " + Arrays.toString(tabPassager);
+        str += '}';
         return str;
     }
 }

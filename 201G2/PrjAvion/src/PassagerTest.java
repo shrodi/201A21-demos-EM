@@ -1,6 +1,7 @@
 public class PassagerTest {
     public PassagerTest() {
         saisirEtAfficherUnPassager();
+        //testerPassager();
     }
 
     private void saisirEtAfficherUnPassager() {
@@ -8,11 +9,11 @@ public class PassagerTest {
         int age;
         int poids;
         boolean poidEtAgeEstValide;
-        //saisir age et poids
 
+        //saisir age et poids
         do {
-            age = Util.lireInt("Quel est l'âge du passager ? ");
-            poids = Util.lireInt("Quel est le poids du passager (en livre) ? ");
+            age = Util.lireEntier("Quel est l'âge du passager ? ");
+            poids = Util.lireEntier("Quel est le poids du passager (en livre) ? ");
 
             poidEtAgeEstValide = Passager.ageEstValide(age) && Passager.poidsEstValide(poids);
 
